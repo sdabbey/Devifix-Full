@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block content %}
+   
+    <div class="back">
+        <a href="{% url 'userpro-welcome' %}" class="btn"><i class="bx bx-chevron-left"></i> Go home</a>
+    </div>
+    <div class="action-buttons">
+       
+        <li><a href="{% url 'orders:userpro-create-order'  %}" class="btn">Auftrag verfassen</a></li>
+        <li><a href="#" class="btn active">Erfasste Aufträge</a></li>
+        
+    </div>
+    <div class="order-list">
+        {% for order in orders  %}
+        <div class="order">
+            <div class="left">
+                <h3>{{order.title}}</h3>
+                <p>{{order.description}}</p>
+            </div>
+            <div class="right">
+                <div class="budget">
+                    <h2 class="price">${{order.budget}}</h2>
+                    <small class="date">{{order.date_posted |date:"F d, Y"}}</small>
+                </div>
+                <div class="edit-options">
+                    <a href="{% url 'orders:userpro-order-update' order.id %}" class="btn">bearbeiten</a>
+                    <a href="{% url 'orders:userpro-order-delete' order.id%}" class="btn">Delete</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+       
+       
+    </div>
+    
+{% endblock content %}
+

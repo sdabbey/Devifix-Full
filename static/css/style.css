@@ -1,0 +1,379 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Oswald&family=Montserrat&family=Lato&family=Barlow&family=Sacramento&display=swap");
+:root {
+  --primary-color: #FD4100;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  font-size: 18px;
+  padding: 0 3rem;
+  box-sizing: border-box;
+  background: #E2E3EA;
+}
+
+/* Navbar */
+.navbar {
+  width: 100%;
+  height: 10vh !important;
+  background-color: white;
+  line-height: 50px !important;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  box-sizing: border-box;
+}
+.navbar .nav-logo {
+  display: flex;
+  width: 20%;
+  align-items: center;
+  justify-content: center;
+}
+.navbar .nav-logo img {
+  width: 8em;
+}
+.navbar .nav-content {
+  display: flex;
+  width: 60%;
+  align-items: baseline;
+  justify-content: space-around;
+}
+.navbar .nav-content li {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  align-items: center;
+  margin-top: 0.5em;
+  line-height: 1.5em;
+}
+.navbar .nav-content li img {
+  width: 0.5em;
+  position: relative;
+  display: none;
+}
+.navbar .nav-content li a {
+  text-decoration: none;
+  font-family: "Barlow";
+  color: #4A4A4A;
+  transition: all 0.4s ease;
+  font-weight: 500;
+}
+.navbar .nav-content li a:hover {
+  color: black;
+}
+.navbar .nav-content li a.active {
+  color: black;
+  font-weight: 600;
+}
+.navbar .nav-content li a.active ~ img {
+  display: flex;
+}
+
+.btn {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: black;
+  padding: 0.6rem 1.2rem;
+  border-radius: 20px 20px;
+  background-color: #D9D9D9;
+  font-family: "Poppins";
+}
+
+.btn.active {
+  background-color: var(--primary-color);
+}
+
+/* Main */
+.main {
+  width: 100%;
+  height: 75vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #F7F7F7;
+  margin-top: 10vh;
+  border-radius: 60px 60px;
+  border: 15px solid rgba(253, 63, 0, 0.1529411765);
+  box-shadow: 0px 4px 10px 4px rgba(0, 0, 0, 0.199);
+  /* Userwork orders styles */
+  /* UserPro Create Offer */
+  /* Order List */
+}
+.main .first-section {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2%;
+}
+.main .first-section .left {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.main .first-section .left h3 {
+  font-size: 40px;
+  line-height: 60px;
+  font-family: "Poppins";
+  font-weight: bold;
+  height: 20%;
+  letter-spacing: 0.07cm;
+}
+.main .first-section .left span {
+  font-size: 1.5em;
+  height: 30%;
+  font-family: "Poppins";
+  font-weight: bold;
+  letter-spacing: 0.05cm;
+  line-height: 40px;
+}
+.main .first-section .left p {
+  height: 20%;
+  letter-spacing: 0.03cm;
+}
+.main .first-section .right {
+  width: 40%;
+  display: flex;
+  align-items: center;
+}
+.main .second-section {
+  width: 90%;
+  margin-bottom: 2%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.main .second-section a.btn {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 20px 20px;
+  background-color: var(--primary-color) !important;
+}
+.main .third-section {
+  width: 90%;
+  height: auto;
+  display: flex;
+  border-radius: 15px 15px;
+  align-items: center;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.171);
+}
+.main .third-section .img-container {
+  width: 15%;
+  height: auto;
+  margin-right: 1rem;
+  border-radius: 15px 15px;
+}
+.main .third-section .img-container img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 15px 15px;
+}
+.main .third-section .employer {
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.main .third-section .employer .employer-pic {
+  width: 4rem;
+  height: 4rem;
+  box-sizing: border-box;
+  border-radius: 50% 50%;
+  border: 1px solid green;
+  margin-right: 1rem;
+}
+.main .third-section .employer .employer-pic img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50% 50%;
+}
+.main .third-section .employer .employer-details {
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.main .third-section .employer .employer-details h5 {
+  font-size: 1em;
+}
+.main .third-section .extra {
+  width: 20%;
+  display: flex;
+  right: 0;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+  right: 0;
+  margin-left: auto;
+}
+.main .third-section .extra .status h6 {
+  color: #7C7C7C;
+}
+.main .third-section .extra .status small {
+  color: green;
+}
+.main .third-section .extra .amount h6 {
+  color: #7C7C7C;
+}
+.main .third-section .extra .amount small {
+  color: var(--primary-color);
+}
+.main .action-buttons {
+  height: 20%;
+  width: 50%;
+  display: flex;
+  color: white;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.main .action-buttons li {
+  list-style: none;
+}
+.main .action-buttons li a.btn:hover {
+  background-color: var(--primary-color);
+}
+.main form {
+  width: 100%;
+  height: 85%;
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 5rem;
+  box-sizing: border-box;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  white-space: nowrap;
+  gap: 20px;
+}
+.main form input {
+  width: 30%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 0.4rem 0.8rem;
+  border-radius: 10px;
+  border: 1px solid #B1B1B1;
+}
+.main form .first {
+  width: 90%;
+  height: 10%;
+  display: flex;
+  justify-content: space-between;
+}
+.main form .second {
+  width: 90%;
+  height: 30%;
+  display: flex;
+  justify-content: space-between;
+}
+.main form .second textarea {
+  width: 60%;
+  border-radius: 10px;
+  padding: 1rem;
+}
+.main form .third {
+  width: 90%;
+  height: 10%;
+}
+.main form .third .btn {
+  padding: 0.4rem 0.8rem;
+  background-color: #D9D9D9;
+}
+.main form .fourth {
+  width: 40%;
+  height: 10%;
+  display: flex;
+  align-items: center;
+  align-self: center;
+  justify-content: space-around;
+}
+.main form .fourth button {
+  padding: 0.6rem 2.4rem;
+  background: var(--primary-color);
+  border: none;
+  color: white;
+}
+.main .order-list {
+  width: 80%;
+  height: 90%;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 2rem 1rem;
+}
+.main .order-list::-webkit-scrollbar {
+  width: 10px;
+}
+.main .order-list::-webkit-scrollbar-track {
+  background: white;
+}
+.main .order-list::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: #D9D9D9;
+}
+.main .order-list .order {
+  width: 90%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  border-radius: 15px 15px;
+  box-shadow: 0px 1px 10px 2px rgba(0, 0, 0, 0.178);
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+.main .order-list .order .left {
+  width: 45%;
+}
+.main .order-list .order .left h3 {
+  font-size: 1.5em;
+  font-weight: bold;
+  font-family: "Poppins";
+}
+.main .order-list .order .left p {
+  font-size: 0.8em;
+  font-family: "Poppins";
+}
+.main .order-list .order .right {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.main .order-list .order .right .budget {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+}
+.main .order-list .order .right .budget h2 {
+  font-size: 2em;
+  line-height: 0.8em;
+  font-family: "Lato";
+  font-weight: 600;
+}
+.main .order-list .order .right .budget small {
+  font-size: 0.7em;
+}
+.main .order-list .order .right .edit-options {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  white-space: nowrap;
+  width: 100%;
+}
+.main .order-list .order .right .edit-options .btn {
+  background-color: var(--primary-color);
+  color: white;
+}/*# sourceMappingURL=style.css.map */

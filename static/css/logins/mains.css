@@ -1,0 +1,288 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: 'poppins';
+}
+body{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+:root{
+    --main-theme-color:#fd4100;
+}
+
+div.forms{
+    display: flex;
+}
+.forms{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.form-container{
+    position: absolute;
+    display: flex;
+    width: 80%;
+    height: 80%;
+    border-radius: 60px 60px;
+    box-sizing: border-box;
+    border: 15px solid #FFFFFF3B;
+    box-shadow: 0px 6px 10px 4px rgba(0, 0, 0, 0.199);
+    justify-content: space-around;
+    
+}
+.form-container .left-content,.form-container .right-content{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+section.left{
+    background-color: var(--main-theme-color);
+    height: 100vh;
+    display: grid;
+    width: 50%;
+}
+section.left .logo{
+    width: 100%;
+    height: fit-content;
+    padding:5% 10%;
+  
+}
+section.left-content .form-outline{
+    width: 100%;
+    box-sizing: border-box;
+
+}
+section.left-content .form-outline img{
+    width: 100%;
+    margin: 1em;
+}
+section.right{
+    display: grid;
+    height: 100vh;
+    width: 50%;
+    background-color: #d9d9d9;
+}
+
+section.right-content ul.type{
+
+    justify-content: center;
+    align-self: center;
+    width: 100%;
+    display: flex;
+    height: min-content;
+}
+
+section.right-content ul.type li{
+    list-style: none;
+   
+   
+    font-size: 1em;
+    font-family: 'Poppins';
+    margin:0 1rem;
+   
+    color:black;
+}
+section.right-content ul.type li a{
+    list-style: none;
+    border-radius:20px 20px;
+    padding:.37rem 1.1rem;
+    font-size: 1em;
+    font-family: 'Poppins';
+    text-decoration: none;
+    background-color: #80808049;
+    color:black;
+}
+
+section.right-content ul.type li a.active{
+    background-color: var(--main-theme-color);
+    color:white;
+}
+
+section.right-content form{
+    width: 100%;
+    padding: 0 2rem;
+
+}
+
+section.right-content form h2.title{
+    font-weight: 400;
+    font-size: 1.8em;
+    text-align: center;
+    line-height: 2em;
+    font-family: 'Lato';
+}
+
+section.right-content form label{
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-family: 'Poppins';
+    line-height: 22.5px;
+    letter-spacing: 0.03cm;
+    color: #5F5F5F;
+    font-size: .68rem;
+}
+
+section.right-content form label#remember{
+    font-size: .8em;
+    font-weight: bold;
+    margin-top: 1.54rem;
+    font-family: "Poppins";
+}
+
+section.right-content form input{
+    border-radius: .35rem;
+    border:none;
+    outline:none;
+    padding: .9rem .8rem;
+    width: 60%;
+    font-family: 'Lato';
+    margin-bottom: .34rem;
+}
+
+section.right-content form input[type = "checkbox"]{
+    width: fit-content;
+    margin-top: 1.54rem;
+}
+section.register-left{
+    width: 40% !important;
+}
+div.register-container{
+    width: 95%;
+    justify-content: space-between !important;
+}
+section.register-content{
+    width: 45% !important;
+ 
+}
+
+section.right-content form.register-form{
+    display: flex;
+    flex-wrap: wrap;
+    white-space: nowrap;
+}
+section.right-content form li{
+    display: inline-block;
+}
+
+section.right-content form li input{
+    width: 17vw;
+    margin-right: 1rem;
+}
+
+section.right-content form button,
+.verification-modal section.content button.verify{
+    border:none;
+    outline: none;
+    border-radius: 12px 12px;
+    padding: .9rem 0;
+    width: calc(80% + 1.6rem);
+    background-color: var(--main-theme-color);
+    margin-top: 2.5rem;
+    color:white;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    line-height: .5em;
+    font-size: 1.02rem;
+}
+
+section.right-content form li button.send-code{
+    letter-spacing: .03rem;
+    font-size: .87rem;
+    width: 10vw;
+}
+
+section.right-content form ul.other-info li{
+    display: flex;
+    width: calc(80% + 1.6rem);
+    font-size: .85rem;
+    justify-content: center;
+    margin: 1rem 0;
+    text-align: center;
+    font-family: 'Lato';
+}
+
+section.right-content form ul.other-info li a{
+    text-decoration: none;
+    color:var(--main-theme-color)
+}
+
+.verification-modal{
+    position: absolute;
+    top:0;
+    width:100vw;
+    height: 100vh;
+    background-color: #2221203d;
+    display: none;
+    align-content: center;
+    justify-content: center;
+    animation: slide .33s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.verification-modal section.content{
+    background-color: white;
+    padding: 3rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.verification-modal section.content h2{
+    font-weight: 600;
+    font-size: 1.42rem;
+    text-align: center;
+}
+
+.verification-modal section.content p{
+    text-align: center;
+    width: 70%;
+    font-size: .9rem;
+    margin:1rem 0;
+}
+
+.verification-modal section.content ul.buttons{
+    display: flex;
+}
+
+.verification-modal section.content ul.buttons li{
+    list-style: none;
+    display: inline-flex;
+    margin:0 .16rem;
+}
+
+.verification-modal section.content ul.buttons li button{
+    height: 2.5rem;
+    width: 3rem;
+    background: #ee9071;
+    border: none;
+    outline: none;
+    border-radius: .3rem;
+    font-size: 1.09rem;
+    font-weight: 600;
+    padding: 0;
+}
+
+.verification-modal section.content button.verify{
+    margin-top: 1rem;
+}
+
+.verification-modal section.content input[type='number']{
+    border:none;
+    outline: none;
+    opacity: 0;
+}
+
+@keyframes slide{
+    0%{
+        transform: translateY(-20rem);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}

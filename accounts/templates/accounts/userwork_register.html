@@ -1,0 +1,82 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>Devifix - Sign Up, Sign In</title>
+    <link rel="stylesheet" href="{% static 'css/logins/mains.css' %}">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Oswald&family=Montserrat&family=Lato&family=Barlow&family=Sacramento&display=swap');
+    
+        form input{
+            font-size: 1em;
+            width: 80% !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="forms">
+        <section class="left">
+           <div class="logo">
+            <img src="{% static 'imgs/Group-white.png' %}" alt="">
+           </div>
+        </section>
+        <section class="right">
+
+        </section>
+        <div class="form-container">
+            <section class="left-content">
+                
+                <div class="form-outline">
+                    <img src="{% static 'imgs/cuate.png' %}" alt="" srcset="">
+                </div>
+            </section>
+            <section class="right-content">
+                {% if messages %}
+            <div class="messages">
+                {% for message in messages %}
+                <div {% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                {% endfor %}
+            </div>
+            {% endif %}
+            <ul class="type">
+                <li>
+                    <a class="active" href="#">User Work</a>
+                </li>
+                <li>
+                    <a href="{% url 'accounts:register-userpro' %}" >User Pro</a>
+                </li>
+            </ul>
+                <form  method="POST" action="">
+                    {% csrf_token %}
+                    <h2 class="title">
+                        Registration of Account
+                    </h2>
+                    <label for="First Name">First Name</label><br>
+                    {{form.first_name}}<br>
+                    <label for="Company Name">Company Name</label><br>
+                    {{form.company}}<br>
+                    <label for="telephone">telephone</label><br>
+                    {{form.number}}<br>
+                    <label for="email">Email</label><br>
+                    {{form.email}}<br>
+                    <button type="submit">Register</button>
+                    <ul class="other-info">
+                        <li>
+                            <p>Already have an account? <a href="#">Log In!</a></p>
+                        </li>
+                    </ul>
+                </form>
+            </section>
+        </div>
+    </div>
+</body>
+</html>

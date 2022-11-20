@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+    input[name="date_posted"]{
+        display: none;
+    }
+    .custom-file-input{
+        display:none;
+    }
+</style>
+    <div class="action-buttons">
+        <li><a href="#" class="btn active">Update</a></li>
+        <li><a href="{% url 'orders:userpro-orders' request.user.username  %}" class="btn">Erfasste Aufträge</a></li>
+    </div>
+    
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+            <div class="first">
+                {{form.title}}
+                {{form.budget}}
+            </div>
+            <div class="second">
+                {{form.description}}
+                {{form.date_posted}}
+            </div>
+
+            <div class="third">
+                <label class="btn">
+                    Change file <i class="bx bx-link"></i>{{form.image}}
+                </label>    
+                <label for="inputFile" class="custom-file-label">
+                    
+                </label>
+            </div>
+           
+            <div class="fourth">
+                {% csrf_token %}
+                <button class="btn" type="submit">Update</button>
+            
+            </div>
+    </form>    
+    <script type="application/javascript">
+        
+        $(document).on('change', '.custom-file-input', function (event) {
+            $('.custom-file-label').html(event.target.files[0].name);
+        })
+    </script>
+{% endblock content %}
+      
+    

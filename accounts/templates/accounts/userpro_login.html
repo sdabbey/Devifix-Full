@@ -1,0 +1,36 @@
+{% extends "accounts/userpro-base.html" %}
+{% block form %}
+<style>
+    form input[type="text"],
+    form input[type="password"]{
+        width: 80% !important;
+    }
+</style>
+<ul class="type">
+    <li>
+        <a href="{% url 'accounts:login-userwork' %}">User Work</a>
+    </li>
+    <li>
+        <a href="#" class="active">User Pro</a>
+    </li>
+</ul>
+<form method="POST">
+    {% csrf_token %}
+    <h2 class="title">
+        Login to your account
+    </h2>
+    <label for="username">Username</label><br>
+    <input type="text" name="username" placeholder="Enter Your Username" id=""><br>
+    <label for="password">Password</label><br>
+    <input type="password" name="password" placeholder="Password"><br>
+    <input type="checkbox" name="remember" id="remember">
+    <label for="remember" id="remember">REMEMBER ME</label><br>
+    <button type="submit">Sign in</button>
+    <ul class="other-info">
+        <li>
+            <p>Don't have an account? <a href="{% url 'accounts:register-userpro' %}">Sign Up!</a></p>
+        </li>
+    </ul>
+</form>
+
+{% endblock form %}

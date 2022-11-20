@@ -1,0 +1,301 @@
+:root {
+  --primary-color: #FD4100;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  font-size: 18px;
+  padding: 0 3rem;
+  box-sizing: border-box;
+}
+
+/* Navbar */
+.navbar {
+  width: 100%;
+  height: 15vh !important;
+  line-height: 50px !important;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  box-sizing: border-box;
+}
+.navbar .nav-logo {
+  display: flex;
+  width: 20%;
+  align-items: center;
+  justify-content: center;
+}
+.navbar .nav-logo h1 {
+  font-size: 2em;
+  font-family: "Lato";
+}
+.navbar .nav-logo img {
+  width: 8em;
+}
+.navbar .nav-content {
+  display: flex;
+  width: 60%;
+  align-items: center;
+  justify-content: space-around;
+}
+.navbar .nav-content li {
+  list-style: none;
+}
+.navbar .nav-content li a {
+  text-decoration: none;
+  font-family: "Barlow";
+  color: #4A4A4A;
+  transition: all 0.4s ease;
+  font-weight: 500;
+}
+.navbar .nav-content li a:hover {
+  color: black;
+}
+.navbar .nav-content li a.active {
+  color: black;
+  font-weight: 600;
+}
+
+/* logins */
+.logins {
+  width: 100%;
+  height: 15vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1em;
+  box-sizing: border-box;
+  padding: 1rem;
+}
+.logins a.btn {
+  padding: 0.4rem 2rem;
+  background-color: var(--primary-color);
+  border-radius: 20px 20px;
+  color: white;
+}
+
+/* Landing-Page */
+.landing-page {
+  width: 100%;
+  height: 70vh;
+  padding: 0rem;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+.landing-page .carousel {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.landing-page .carousel .carousel-inner {
+  width: 90%;
+  height: 90%;
+  border-radius: 50px 50px;
+  display: flex;
+  align-items: center;
+  align-self: center;
+  box-sizing: border-box;
+}
+.landing-page .carousel .carousel-inner .carousel-item {
+  width: 100%;
+  height: 100%;
+}
+.landing-page .carousel .carousel-inner .carousel-item img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.landing-page .carousel .carousel-control-prev, .landing-page .carousel .carousel-control-next {
+  margin: 0;
+  padding: 0;
+  width: 4%;
+}
+.landing-page .carousel .carousel-control-prev i.bx, .landing-page .carousel .carousel-control-next i.bx {
+  font-size: 3em;
+  color: black;
+}
+
+/* Section-two */
+.section-two,
+.section-three,
+.section-four,
+.section-five,
+.section-six {
+  width: 100%;
+  height: 70vh;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem 0;
+  padding: 1rem;
+}
+.section-two .title,
+.section-three .title,
+.section-four .title,
+.section-five .title,
+.section-six .title {
+  display: flex;
+  align-items: center;
+  height: 30%;
+  font-size: 2.5em;
+  font-family: "Poppins";
+  font-weight: bold;
+}
+.section-two .section-info,
+.section-three .section-info,
+.section-four .section-info,
+.section-five .section-info,
+.section-six .section-info {
+  display: flex;
+  box-sizing: border-box;
+  width: 100%;
+  height: 70%;
+  justify-content: space-between;
+}
+.section-two .section-info .img-container,
+.section-three .section-info .img-container,
+.section-four .section-info .img-container,
+.section-five .section-info .img-container,
+.section-six .section-info .img-container {
+  width: 40%;
+  height: 100%;
+  padding-top: 0.7em;
+  padding-right: 1.2em;
+  background-color: #FFDFD4;
+  border-radius: 5px;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
+}
+.section-two .section-info .img-container img,
+.section-three .section-info .img-container img,
+.section-four .section-info .img-container img,
+.section-five .section-info .img-container img,
+.section-six .section-info .img-container img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.section-two .section-info .content,
+.section-three .section-info .content,
+.section-four .section-info .content,
+.section-five .section-info .content,
+.section-six .section-info .content {
+  width: 55%;
+  height: 100%;
+  box-sizing: border-box;
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.section-two .section-info .content p,
+.section-three .section-info .content p,
+.section-four .section-info .content p,
+.section-five .section-info .content p,
+.section-six .section-info .content p {
+  font-size: 1.1em;
+  font-family: "Lato";
+}
+.section-two .section-info .content a.btn-action,
+.section-three .section-info .content a.btn-action,
+.section-four .section-info .content a.btn-action,
+.section-five .section-info .content a.btn-action,
+.section-six .section-info .content a.btn-action {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  margin-left: 2rem;
+}
+.section-two .section-info .content a.btn-action small,
+.section-three .section-info .content a.btn-action small,
+.section-four .section-info .content a.btn-action small,
+.section-five .section-info .content a.btn-action small,
+.section-six .section-info .content a.btn-action small {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background: blue;
+  position: relative;
+  padding: 0.2rem 1.8rem;
+  padding-left: 1rem;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  color: white;
+  font-family: "Barlow";
+  font-weight: bold;
+  text-align: start;
+  border-radius: 10px 10px;
+  background-color: var(--primary-color);
+}
+.section-two .section-info .content a.btn-action i.bx,
+.section-three .section-info .content a.btn-action i.bx,
+.section-four .section-info .content a.btn-action i.bx,
+.section-five .section-info .content a.btn-action i.bx,
+.section-six .section-info .content a.btn-action i.bx {
+  position: relative;
+  margin-left: -15%;
+  padding: 0.4rem;
+  border: 1px solid white;
+  font-size: 1.4em;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+}
+
+/* Footer */
+footer {
+  width: 100%;
+  height: 70vh;
+  display: block;
+}
+footer .footer-logo {
+  width: 100%;
+  height: 30%;
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+}
+footer .footer-content {
+  display: flex;
+  width: 100%;
+  height: 60%;
+  justify-content: space-around;
+}
+footer .footer-content h3 {
+  font-size: 2em;
+  font-family: "Poppins";
+  font-weight: bold;
+  pointer-events: none;
+}
+footer .footer-content li {
+  list-style: none;
+  line-height: 2.5em;
+}
+footer .footer-content li a {
+  text-decoration: none;
+  color: black;
+  font-family: "Lato";
+}
+footer .extra {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+footer .extra span a {
+  text-decoration: none;
+  padding: 0.4rem 2rem;
+  font-family: "Montserrat";
+  color: #898989;
+}/*# sourceMappingURL=landingpage.css.map */
