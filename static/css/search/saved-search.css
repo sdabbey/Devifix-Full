@@ -1,0 +1,135 @@
+:root {
+  --primary-color: #FD4100;
+}
+
+.saved-offers {
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.saved-offers .card {
+  width: 47.619047619%;
+  height: 188px;
+  box-shadow: 1px 0px 5px 1px rgba(0, 0, 0, 0.062);
+  border-radius: 10px;
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: row;
+  font-family: "Poppins";
+}
+.saved-offers .card .card-img {
+  width: 40%;
+  display: flex;
+}
+.saved-offers .card .card-img img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.saved-offers .card .card-content {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 0.5rem;
+}
+.saved-offers .card .card-content .first {
+  margin-top: 0.4rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.saved-offers .card .card-content .first .user-details {
+  width: 75%;
+  display: flex;
+}
+.saved-offers .card .card-content .first .user-details .user-img {
+  width: 20%;
+  border-radius: 50%;
+  display: flex;
+}
+.saved-offers .card .card-content .first .user-details .user-img img {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.saved-offers .card .card-content .first .user-details .details {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+}
+.saved-offers .card .card-content .first .user-details .details h3 {
+  width: 50%;
+  display: flex;
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 0.7em;
+  margin: 0;
+  justify-content: space-between;
+}
+.saved-offers .card .card-content .first .user-details .details h3 small {
+  font-size: 0.6em;
+  color: #7A7A7A;
+}
+.saved-offers .card .card-content .first .user-details .details h3 small i.bx {
+  color: #FFB800;
+}
+.saved-offers .card .card-content .first .user-details .details span {
+  font-size: 0.8em;
+}
+.saved-offers .card .card-content .first .budget-price {
+  width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.saved-offers .card .card-content .first .budget-price h2 {
+  font-size: 1.4em;
+  font-weight: bold;
+}
+.saved-offers .card .card-content .content {
+  width: 70%;
+  height: 45%;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin-top: 0.5rem;
+  text-overflow: ellipsis;
+}
+.saved-offers .card .card-content .content p {
+  padding: 0.4rem;
+  font-size: 0.7em;
+}
+.saved-offers .card .card-content .action {
+  bottom: 0;
+  margin-top: auto;
+  display: flex;
+  width: 100%;
+  padding: 0;
+  margin: 0.2rem;
+  align-items: center;
+  justify-content: space-between;
+}
+.saved-offers .card .card-content .action .fav-btn a {
+  text-decoration: none;
+}
+.saved-offers .card .card-content .action .fav-btn a i.bx {
+  color: var(--primary-color);
+}
+.saved-offers .card .card-content .action .btn {
+  background-color: var(--primary-color);
+  color: white;
+  text-decoration: none;
+}/*# sourceMappingURL=saved-search.css.map */

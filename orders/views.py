@@ -112,7 +112,7 @@ def favorite_orders(request, pk):
         user = request.user
         user.favorites.add(favorite)
         messages.add_message(request, messages.INFO, 'Deal Favorited.')
-        return redirect('homepage')
+        return redirect('search-post')
 
 
 

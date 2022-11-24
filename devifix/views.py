@@ -4,6 +4,7 @@ from django.contrib.auth.decorators import login_required
 from accounts.forms import ProfileForm
 from django.contrib import messages
 from django.db.models import Q
+from accounts.models import User
 def home(request):
     return render(request, "landing-page.html")
 
@@ -54,6 +55,11 @@ def search_post(request):
     else:
         offers = Order.objects.all().order_by("-date_posted")
     return render(request, 'search/search.html', {'offers': offers})
+
+
+def saved_search_post(request):
+    saved_post = User.objects.get(id=request.user.id)
+    return render(request, 'search/saved-search.html', {'saved_post': saved_post})
 
 #Cockpit
 

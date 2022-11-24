@@ -29,6 +29,7 @@ urlpatterns = [
 
     #Search
     path("search/", views.search_post, name="search-post"),
+    path("search/saved-search/", views.saved_search_post, name="saved-search-post"),
     #Cockpit
     path("cockpit/", views.cockpit, name="cockpit")
 

@@ -1,0 +1,288 @@
+:root {
+  --primary-color: #FD4100;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  font-size: 18px;
+  padding: 0 3rem;
+  box-sizing: border-box;
+  background: #E2E3EA;
+}
+
+/* Navbar */
+.navbar {
+  width: 100%;
+  height: 10vh !important;
+  background-color: white;
+  line-height: 50px !important;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  box-sizing: border-box;
+}
+.navbar .nav-logo {
+  display: flex;
+  width: 20%;
+  align-items: center;
+  justify-content: center;
+}
+.navbar .nav-logo img {
+  width: 8em;
+}
+.navbar .nav-content {
+  display: flex;
+  width: 60%;
+  align-items: baseline;
+  justify-content: space-around;
+}
+.navbar .nav-content li {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  align-items: center;
+  margin-top: 0.5em;
+  line-height: 1.5em;
+}
+.navbar .nav-content li img {
+  width: 0.5em;
+  position: relative;
+  display: none;
+}
+.navbar .nav-content li a {
+  text-decoration: none;
+  font-family: "Barlow";
+  color: #4A4A4A;
+  transition: all 0.4s ease;
+  font-weight: 500;
+}
+.navbar .nav-content li a:hover {
+  color: black;
+}
+.navbar .nav-content li a.active {
+  color: black;
+  font-weight: 600;
+}
+.navbar .nav-content li a.active ~ img {
+  display: flex;
+}
+
+.btn {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: black;
+  padding: 0.6rem 1.2rem;
+  border-radius: 10px 10px;
+  background-color: #D9D9D9;
+  font-family: "Poppins";
+}
+
+.btn.active {
+  background-color: var(--primary-color);
+}
+
+.search-container {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+}
+.search-container .searchbox {
+  width: 35%;
+  display: flex;
+  align-items: center;
+}
+.search-container .searchbox input {
+  width: 100%;
+  border-radius: 20px 20px;
+  padding: 0.7em 0.8rem;
+  background-color: white;
+  border: none;
+  color: #a9a9a9;
+  text-align: center;
+}
+.search-container .searchbox button {
+  padding: 0;
+  border: none;
+  background: transparent;
+  margin-left: -12%;
+}
+.search-container .searchbox button i.bx {
+  padding: 0.6rem;
+  color: white;
+  font-weight: 600;
+  font-size: 1em;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+}
+.search-container .search-actions {
+  width: 45%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.search-container .search-actions .btn {
+  background-color: white;
+  text-decoration: none;
+  color: black;
+}
+.search-container .search-actions .btn.active {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+/* Main */
+.main {
+  width: 100%;
+  height: 75vh;
+  display: flex;
+  flex-direction: column;
+  background: #F7F7F7;
+  border-radius: 60px 60px;
+  border: 15px solid rgba(253, 63, 0, 0.1529411765);
+  overflow-y: scroll;
+  box-shadow: 0px 4px 10px 4px rgba(0, 0, 0, 0.199);
+}
+.main::-webkit-scrollbar {
+  width: 10px;
+}
+.main::-webkit-scrollbar-track {
+  background: transparent;
+}
+.main::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: #D9D9D9;
+}
+.main .first-row {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  height: 100%;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: space-around;
+  padding: 1rem;
+  flex-wrap: wrap;
+}
+.main .first-row .card {
+  width: 18.8679245283%;
+  height: 47.619047619%;
+  box-sizing: border-box;
+  border-radius: 10px;
+  font-family: "Poppins";
+  margin: 0.2rem;
+}
+.main .first-row .card:hover {
+  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.363);
+}
+.main .first-row .card .card-img {
+  width: 100%;
+  height: 60%;
+  border-radius: 10px;
+}
+.main .first-row .card .card-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+}
+.main .first-row .card .card-content {
+  width: 100%;
+  height: 15%;
+  display: flex;
+  padding: 0.3em;
+  box-sizing: border-box;
+  justify-content: space-between;
+}
+.main .first-row .card .card-content .profile-img {
+  width: 20%;
+  border-radius: 50% 50%;
+}
+.main .first-row .card .card-content .profile-img img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.main .first-row .card .card-content .details {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  pointer-events: none;
+  box-sizing: border-box;
+}
+.main .first-row .card .card-content .details h4 {
+  font-size: 1em;
+  margin: 0;
+  line-height: 1em;
+}
+.main .first-row .card .card-content .details small {
+  font-size: 0.6em;
+}
+.main .first-row .card .rating {
+  width: 100%;
+  height: 10%;
+  padding: 0.3em;
+  pointer-events: none;
+  border-bottom: 1px solid rgba(116, 116, 116, 0.1843137255);
+}
+.main .first-row .card .rating span {
+  color: #9c9595;
+  font-family: "Poppins";
+  font-size: 0.7em;
+}
+.main .first-row .card .rating span i.bx {
+  color: #FFB800;
+  padding-right: 0.2em;
+  font-size: 0.7em;
+}
+.main .first-row .card .card-extra {
+  width: 100%;
+  height: 15%;
+  box-sizing: border-box;
+  display: flex;
+  white-space: nowrap;
+  justify-content: space-between;
+  padding: 0 0.3rem;
+}
+.main .first-row .card .card-extra button {
+  background: transparent;
+  border: none;
+}
+.main .first-row .card .card-extra button.active i.bx {
+  color: var(--primary-color) !important;
+}
+.main .first-row .card .card-extra a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+.main .first-row .card .card-extra a i.bx {
+  color: #BDBDBD;
+}
+.main .first-row .card .card-extra .pricing {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  pointer-events: none;
+  align-items: center;
+}
+.main .first-row .card .card-extra .pricing small {
+  padding-right: 0.5em;
+  text-transform: uppercase;
+  font-size: 0.5em;
+  letter-spacing: 0.03cm;
+  font-family: "Poppins";
+  color: #747474;
+  font-weight: bold;
+}
+.main .first-row .card .card-extra .pricing h3 {
+  font-size: 1em;
+}/*# sourceMappingURL=searche.css.map */

@@ -1,0 +1,53 @@
+{% extends "search/base-search.html" %}
+{% load static %}
+{% block custom-css %} <link rel="stylesheet" href="{% static 'css/search/saved-search.css' %}"> {% endblock custom-css %}
+{% block search-container %}
+<div class="search-container">
+    <form class="searchbox" action="{% url 'search-post' %}">
+        <input type="search" class="form-control" placeholder="Personen/Firmen" name="search" id="">
+        <button type="submit"><i class="bx bx-search"></i></button>
+    </form>
+    <div class="search-actions">
+        <a href="{% url 'search-post' %}" class="btn">Company / Person Search</a>
+        <a href="#" class="btn active">Gespeicherte Suche</a>
+    </div>
+</div>
+{% endblock search-container %}
+{% block content %}
+<div class="saved-offers">
+   {% for favorite in saved_post.favorites.all  %}
+   <div class="card">
+    <div class="card-img">
+        <img src="{{favorite.image.url}}" alt="">
+    </div>
+    <div class="card-content">
+        <div class="first">
+            <div class="user-details">
+                <div class="user-img">
+                    <img src="{{favorite.user.profile.image.url}}" alt="">
+                </div>
+                <div class="details">
+                    <h3>{{favorite.user}} <small class="rating"><i class="bx bxs-star"></i>5.0</small></h3>
+                    <span>{{favorite.user.company}}</span>
+                </div>
+            </div>
+            <div class="budget-price">
+                <h2>${{favorite.budget}}</h2>
+            </div>
+        </div>
+        <div class="content">
+            <p>{{favorite.description}}
+            </p>
+        </div>
+        <div class="action">
+            <div class="fav-btn">
+                <a href="#"><i class="bx bxs-heart"></i></a>
+            </div>
+            <a href="#" class="btn">Order Now</a>
+        </div>
+    </div>
+</div>
+   {% endfor %}
+ 
+</div>
+{% endblock content %}
